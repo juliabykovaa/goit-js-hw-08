@@ -19,10 +19,10 @@ function onFormInput() {
 
 function onFormSubmit(evt) {
     evt.preventDefault();
-    
     evt.target.reset(); 
+    console.log(localStorage.getItem(LOCALSTORAGE_KEY));
     localStorage.removeItem(LOCALSTORAGE_KEY)
-    console.log(inputData);
+    
     
 }
 
