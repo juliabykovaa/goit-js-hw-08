@@ -19,13 +19,13 @@ function onFormInput() {
 
 function onFormSubmit(evt) {
     evt.preventDefault();
-    console.log(inputData);
     evt.target.reset();
+    console.log(inputData);
 }
 
-function setInput(evt) {
+function setInput() {
     const savedData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
-    for (key in savedData) {
+    for(let key in savedData) {
         if (savedData) {
             formInput[key].value = savedData[key];
         }
