@@ -20,7 +20,8 @@ function onFormInput() {
 function onFormSubmit(evt) {
     evt.preventDefault();
     evt.target.reset(); 
-    console.log(localStorage.getItem(LOCALSTORAGE_KEY));
+    const parcedInputs = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY))
+    console.log(parcedInputs)
     localStorage.removeItem(LOCALSTORAGE_KEY)
     
     

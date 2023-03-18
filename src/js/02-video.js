@@ -9,5 +9,7 @@ player.on('timeupdate', trottle(function (data) {
 }, 1000)
 );
 
+if (current_time > 0) {
+   player.setCurrentTime(localStorage.getItem(current_time)); 
+}
 
-player.setCurrentTime(localStorage.getItem((current_time) || 0));
